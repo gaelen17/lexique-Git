@@ -40,6 +40,144 @@
 
 	<h4>créer un fichier dans mon dossier local : exemple</h4>
 	<p>$ touch index.html</p>
+	<p>chapitre : openclassrooms travailler depuis votre dépôt local git.</p>
+	<p>$ git status</p>
+
+	<h5>Pour cloner un fichier depuis Git</h5>
+	<p>je récupère un fichier sur Git pour pouvoir travailler dessus :</p>
+	<p>$ git clone + l'url copiée sur GIT</p>
+	<p>pour créer un nom raccourci, on lance la commande : <br>
+		$git remote add + nom du fichier qu'on veut créer + url récupérée
+	</p>
+
+	<h5>faire une pull request</h5>
+
+		<h4>il s'agit de demander à fusionner nos changements sur la branche principale</h4>
+		<p>on aura au préalable créé une nouvelle branche et envoyé le code sur cette branche.</p>
+		<p></p>
+		<p>$ git status</p>
+
+		<h5>Pour cloner un fichier depuis Git</h5>
+		<p>je récupère un fichier sur Git pour pouvoir travailler dessus :</p>
+		<p>$ git clone + l'url copiée sur GIT</p>
+		<p>pour créer un nom raccourci, on lance la commande : <br>
+			$git remote add + nom du fichier qu'on veut créer + url récupérée
+		</p>
+
+		<h4>nouvel exemple : je clone depuis Lunadoll simple-website</h4>
+		<p>je suis dans mon compte Lunadoll7. <br>
+			je copie l'adresse du dépot simple-website de gaelen17. <br>
+			dans gitbash, taper la commande : <br>
+			$ git clone + l'adresse http copiée. <br>
+			pour regarder les branches que j'ai : <br>
+			$ git branch <br>
+			une fois que j'ai cloné ce dépot en local, je possède donc un dossier simple-website à l'intérieur de mon dossier code. <br>
+			Maintenant, je me déplace dans le dossier simple-website en vérifiant où je suis avec : <br>
+			$ pwd <br>
+			Je suis dans le dossier : CODE. Pour me placer dans le sous-dossier simple-website, je tape la commande cd : <br>
+			$ cd simple-website <br>
+			Je crée une branche que j'appelle luna : <br>
+			$ git branch luna <br>
+			Je vérifie sur quelle branche je suis : <br>
+			$ git branch <br>
+			Je suis en effet sur main. indiqué par * . Pour basculer sur luna : <br>
+			$ git checkout luna
+		</p>
+
+		<h5>Je réalise un commit</h5>
+		<p>
+			Je suis sur la branche Luna de simple website. <br>
+			J'ai ajouté une ligne dans Cities (Madrid) <br>
+			je fais : <br>
+			$git add cities.html<br>
+			$ git commit -m "ajout city lettre M" <br>
+			Le changement est enregistré dans le dépot local et inscrit en rouge car pas encore enregistré dans le dossier distant.
+		</p>
+
+		<h5>Je réalise un push</h5>
+		<p>$ git push -u origin branche1 (ou le nom de la branche)</p>
+
+		<h5>Je réalise un merge</h5>
+		<p>
+			Il faut se situer sur la branche sur laquelle on veut fusionner les réalisations. <br>
+			Je bascule sur master avec : <br>
+			$ git checkout master (ou main) <br>
+			je réalise le merge : <br>
+			$ git merge luna <br>
+		</p>
+		<h5>Je fais une pull request</h5>
+	
+		<h2>REPARER DES ERREURS</h2>
+		<h5>Je supprime une branche.</h5>
+		<p>pour supprimer une branche, je tape : <br>
+			git branch -d (nom de la branche) <br>
+			Si la branche n'est pas vide, je tape :
+			$ git branch -D (nom de la branche) <br>
+			Ce qui supprimera également tous les fichiers qu'elle contient. 	
+		</p>
+		<h5>J'ai modifié une branche par erreur</h5>
+		<p>
+			L'erreur n'a pas été commit. <br>
+			J'ai fait : <br>
+			$ git add PremierFichier.txt <br>
+			puis <br>
+			$ git status <br>
+			Je crée une REMISE avec : <br>
+			$ git stash <br>
+			Les modifications sont remisées pour revenir à une branche master propre. <br>
+			Je vais enregistrer ces changements sur une autre branche. <br>
+			Tout d'abord, je consulte la liste des remises : <br>
+			$ git stash list <br>
+			ensuite : <br>
+			$ git stash apply stash@{(numéro)} 
+		</p>
+		<h5>j'ai modifié une branche par erreur, et en plus réalisé le commit</h5>
+			
+
+		<h5>Effacer une erreur qui a déjà été commit :</h5>
+		<p>
+			$ git log <br>
+			me permet de  récupérer la référence que je vais effacer <br>
+			$ git reset --hard HEAD^ <br>
+			efface. <br>
+			Je crée une nouvelle branche : <br>
+			$ git branch branche2 <br>
+			je me positionne dessus : <br>
+			git checkout branche2 <br>
+			puis :
+			$ git reset --hard (8 premiers chiffres de la référence récupérée avec $ git log) <br>
+			puis taper echap et :x
+		</p>
+		<h5>Je veux modifier le message de mon commit :</h5>
+		<p>
+			$ git commit --amend -m "ahahah"
+		</p>
+		<h5>J'ai oublié un fichier dans mon commit :</h5>
+		<p>
+			$ git commit --amend --no-edit <br>
+			Cette commande permet d'ajouter des fichiers au dernier commit.
+		</p>
+		<h5>Je souhaite annuler un commit que j'ai pushé.</h5>
+		<p>
+			git revert permet de revenir à une version antérieure : <br>
+			$ git revert HEAD^
+		</p>
+
+		<h5>la Clé SSH</h5>
+		<p>
+			taper : <br>
+			$ ssh-keygen -t rsa -b 4096 -C "mon adresse e-mail" <br>
+			Cela génère une paire de clés public/privé. <br>
+			ça m'intéresse pas!
+		</p>
+		<h5>Git Reset</h5>
+		<p>
+			Exemple : devoir revenir 4 commits précédents.<br>
+			--soft, --mixed, --hard. <br>
+			hard : dans le repository, mixed : dans le <br>
 
 
+		</p>
+		<h5>réparer un commit raté</h5>
+		<p>git log, git reflog, git blame, cherry pick</p>
 </body>	
