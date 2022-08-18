@@ -9,4 +9,29 @@ h5
 {
 	font-size : 25px;
 	font-family: arial;
+	color : darkturquoise;
+}
+h2
+{
+	font-size: 40px;
+	font-family: arial;
+	color : darkorchid;
+}
+p
+{
+	font-size: 14px;
+	font-family: arial;
+	color : darkseagreen;
+}
+p
+{
+	font-size: 14px;
+	font-family: arial;
+	color : darkseagreen;
+}
+h2
+{
+	font-size: 20px;
+	font-family: arial;
+	color : darkgoldenrod;
 }
