@@ -1,3 +1,8 @@
+/* this is the CSS for my "memento GIT" page. (index.html du dossier CODE).
+h1 est les caractéristiques du grand titre : MEMENTO.
+
+ */
+
 h1
 {
 	font-size: 50px;
@@ -23,22 +28,29 @@ p
 	font-family: arial;
 	color : darkseagreen;
 }
-p
-{
-	font-size: 14px;
-	font-family: arial;
-	color : darkseagreen;
-}
+
 h2
 {
 	font-size: 20px;
 	font-family: arial;
-	color : darkgoldenrod;
+	color : steelblue;
 }
 h3
 {
 	font-size: 44px;
 	font-family: arial;
 	color : chartreuse;
+}
+h6
+{
+	font-size: 26px;
+	font-family: arial;
+	color : royalblue;
+}
+ol
+{
+	font-size: 20px;
+	font-family: arial;
+	color : deeppink;
 }
 
