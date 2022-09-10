@@ -11,7 +11,7 @@
 -->
 
 <body>
-	<h3>ceci est un test -- sur la branche test</h1>
+	
 	<h1>MEMENTO</h1>
 
 	<p>copier un dépository sur notre terminal. code > https > icone de copie.</p>
@@ -115,9 +115,12 @@
 		</p>
 
 		<h5>Je réalise un push</h5>
+		<p>avec la commande commit, nous avons réalisé des changements locaux, uniquement. <br>
+		Pour envoyer ces changements sur le dépôt distant, on réalise un PUSH. </p>
 		<p>$ git push -u origin branche1 (ou le nom de la branche)</p>
 
 		<h5>Je réalise un merge</h5>
+		<p>Ces changements ont été faits sur une branche annexe. Maintenant il s'agit de les intégrer à la branche Master (également appelée Main).</p>
 		<p>
 			Il faut se situer sur la branche sur laquelle on veut fusionner les réalisations. <br>
 			Je bascule sur master avec : <br>
@@ -166,7 +169,8 @@
 			git checkout branche2 <br>
 			puis :
 			$ git reset --hard (8 premiers chiffres de la référence récupérée avec $ git log) <br>
-			puis taper echap et :x
+			puis taper echap et :x<br>
+			POUR SORTIR DU LOG, TAPER la lettre q.
 		</p>
 		<h5>Je veux modifier le message de mon commit :</h5>
 		<p>
@@ -190,12 +194,45 @@
 			Cela génère une paire de clés public/privé. <br>
 			ça m'intéresse pas!
 		</p>
+
+<!-- paragraphe sur RESET -->
 		<h5>Git Reset</h5>
 		<p>
 			Exemple : devoir revenir 4 commits précédents.<br>
 			--soft, --mixed, --hard. <br>
+
 			hard : dans le directory, mixed : dans le stage, soft dans le repository <br>
-			afin de tester la commande reset, j'ai créé une branche test sur mon memento git.
+			afin de tester la commande reset, j'ai créé une branche test sur mon memento git.<br>
+			Executons un reset --hard en écrivant :<br>
+			$ git reset monCommitCible --hard <br>
+
+
+
+			Cette commande va effacer tout ce qui a été fait à partir de notre commit cible, lui et après.
+			Donc il s'agit de retrouver notre commit.  <br>
+			Quand on fait un commit : <br>
+			git commit -m "blabla" <br>
+			ce qui vient après -m est le "message", c'est un argument. <br>
+			Pour retrouver le commit, j'ai eu l'idée de faire Git log. <br>
+			J'ai ainsi retrouvé le nom de mon commit du 18 Août où j'avais ajouté la ligne tout en haut en gros : "ceci est un test." Cette suite de chiffres et lettres s'appelle un "HASH". C'est l'identifiant de mon commit.<br>
+			Je note ses 10 premiers chiffres, d'ailleurs.<br>
+<!-- paragraphe sur REFLOG -->
+			Je vais en fait avoir besoin d'une nouvelle fonction qui s'appelle Git REFLOG. <br>
+			Ne vous inquiétez pas, avec Git nous avons une super fonction qui va remonter le temps. La commande git revert vous permet de revenir à l'état précédent, tout en faisant un deuxième commit.  Au lieu de supprimer le commit de l'historique du projet, elle détermine comment annuler les changements introduits par le commit et ajoute un nouveau commit avec le contenu ainsi obtenu. Vous allez donc revenir à l'état précédent mais avec un nouveau commit. Ainsi, Git ne perd pas l'historique, lequel est important pour l'intégrité de votre historique de révision et pour une collaboration fiable.
+
+Quelle est la différence entre git reset et git revert ?
+
+git reset  va revenir à l'état précédent sans créer un nouveau commit, alors que  git revert  va créer un nouveau commit.
+
+		</p>
+		<h5>LES CONFLITS</h5>
+		Git va voir que sur la même ligne, on essaie de fusionner deux versions différentes.
+
+
+
+
+
+
 
 
 		</p>
