@@ -5,19 +5,23 @@ h1 est les caractéristiques du grand titre : MEMENTO.
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> c30ec83 (ajout border)
 =======
 >>>>>>> c30ec83 (ajout border)
+=======
+>>>>>>> test
 h1
 {
-	font-size: 50px;
+	font-size: 100px;
 	font-family: arial;
 	color : #505050;
 	background-color: mistyrose;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 	border-style : dotted;
 	border-width : 10px;
@@ -28,6 +32,11 @@ h1
 	border-width : 10px;
 	border-color: black;
 >>>>>>> c30ec83 (ajout border)
+=======
+	border-style : dotted;
+	border-width : 10px;
+	border-color: black;
+>>>>>>> test
 }
 
 body
@@ -41,6 +50,7 @@ h5
 	font-family: arial;
 	color : darkturquoise;
 }
+<<<<<<< HEAD
 h2
 {
 	font-size: 40px;
@@ -49,6 +59,9 @@ h2
 }
 =======
 >>>>>>> test2
+=======
+
+>>>>>>> test
 p
 {
 	font-size: 14px;
@@ -91,6 +104,7 @@ h6
 	font-size: 26px;
 	font-family: arial;
 	color : royalblue;
+	
 }
 ol
 {
