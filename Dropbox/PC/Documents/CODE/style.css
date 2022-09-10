@@ -2,14 +2,17 @@
 h1 est les caractéristiques du grand titre : MEMENTO.
 
  */
-
 h1
 {
-	font-size: 50px;
+	font-size: 100px;
 	font-family: arial;
 	color : #505050;
-	background-color: powderblue;
+	background-color: mistyrose;
+	border-style : dotted;
+	border-width : 10px;
+	border-color: black;
 }
+
 body
 {
 	background-color: rosybrown;
