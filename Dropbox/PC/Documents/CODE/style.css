@@ -2,84 +2,30 @@
 h1 est les caractéristiques du grand titre : MEMENTO.
 
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+body
+{
+	background-color: mintcream;
+	font-family : arial;
+}
+p
+{
+	font-size: 20px;
+	font-family: arial;
+	color : darkseagreen;
+}
 
-=======
->>>>>>> c30ec83 (ajout border)
-=======
->>>>>>> c30ec83 (ajout border)
-=======
->>>>>>> test
 h1
 {
 	font-size: 100px;
 	font-family: arial;
 	color : #505050;
 	background-color: mistyrose;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
+	
 	border-style : dotted;
 	border-width : 10px;
 	border-color: black;
->>>>>>> c30ec83 (ajout border)
-=======
-	border-style : dotted;
-	border-width : 10px;
-	border-color: black;
->>>>>>> c30ec83 (ajout border)
-=======
-	border-style : dotted;
-	border-width : 10px;
-	border-color: black;
->>>>>>> test
 }
-
-body
-{
-	background-color: mintcream;
-}
-
-h5
-{
-	font-size : 25px;
-	font-family: arial;
-	color : darkturquoise;
-}
-<<<<<<< HEAD
-h2
-{
-	font-size: 40px;
-	font-family: arial;
-	color : darkorchid;
-}
-=======
->>>>>>> test2
-=======
-
->>>>>>> test
-p
-{
-	font-size: 14px;
-	font-family: arial;
-	color : darkseagreen;
-}
-body
-{
-	background-color: mintcream;
-}
-h1
-{
-	font-size: 50px;
-	font-family: arial;
-	color : #505050;
-	background-color: mistyrose;
-}
-
 
 h2
 {
@@ -87,11 +33,18 @@ h2
 	font-family: arial;
 	color : steelblue;
 }
+
 h3
 {
 	font-size: 44px;
 	font-family: arial;
 	color : chartreuse;
+}
+h4
+{
+	font-size : 25px;
+	font-family: arial;
+	color : #445764;
 }
 h5
 {
@@ -99,6 +52,7 @@ h5
 	font-family: arial;
 	color : darkturquoise;
 }
+
 h6
 {
 	font-size: 26px;
@@ -106,6 +60,8 @@ h6
 	color : royalblue;
 	
 }
+
+
 ol
 {
 	font-size: 20px;
